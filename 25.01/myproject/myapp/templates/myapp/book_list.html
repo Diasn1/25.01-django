@@ -1,0 +1,8 @@
+<h1>Book List</h1>
+<ul>
+{% for book in object_list %}
+    <li><a href="{{ book.get_absolute_url }}">{{ book.title }}</a> ({{ book.author }})</li>
+{% empty %}
+    <p>There are no books in the library.</p>
+{% endfor %}
+</ul>
